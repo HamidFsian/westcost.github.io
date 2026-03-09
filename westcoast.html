@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Coast Festival 2026 — Oran, Algeria</title>
+  <meta name="description" content="West Coast Festival 2026 — The Ultimate Automotive & Lifestyle Experience in Oran, Algeria. June 25–27, 2026." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            body: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'neon-pink':   '#ff2d78',
+            'neon-purple': '#8b5cf6',
+            'neon-orange': '#ff6b00',
+            'sunset-gold': '#ffb400',
+            'deep-purple': '#0f0520',
+            'mid-purple':  '#1a0535',
+          },
+          animation: {
+            'float':       'float 6s ease-in-out infinite',
+            'float-slow':  'float 10s ease-in-out infinite',
+            'glow-pulse':  'glowPulse 2.5s ease-in-out infinite',
+            'slide-up':    'slideUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+            'fade-in':     'fadeIn 1s ease forwards',
+            'marquee':     'marquee 22s linear infinite',
+            'spin-slow':   'spin 20s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%':     { transform: 'translateY(-18px)' },
+            },
+            glowPulse: {
+              '0%,100%': { boxShadow: '0 0 20px #ff2d78, 0 0 40px #ff2d7840' },
+              '50%':     { boxShadow: '0 0 40px #ff2d78, 0 0 80px #ff2d7870, 0 0 120px #8b5cf620' },
+            },
+            slideUp: {
+              from: { opacity: '0', transform: 'translateY(50px)' },
+              to:   { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              from: { opacity: '0' },
+              to:   { opacity: '1' },
+            },
+            marquee: {
+              '0%':   { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+          },
+          backgroundImage: {
+            'sunset-grad': 'linear-gradient(135deg, #0f0520 0%, #2d0a4e 25%, #6b1f6e 50%, #c0392b 75%, #e67e22 100%)',
+            'neon-grad':   'linear-gradient(135deg, #ff2d78, #8b5cf6)',
+            'gold-grad':   'linear-gradient(135deg, #ff6b00, #ffb400)',
+            'card-grad':   'linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ===== BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #0f0520;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #0f0520; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#ff2d78, #8b5cf6); border-radius: 2px; }
+
+    /* ===== NOISE TEXTURE ===== */
+    .noise::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 1; opacity: 0.5;
+    }
+
+    /* ===== GRID OVERLAY ===== */
+    .grid-overlay {
+      background-image:
+        linear-gradient(rgba(255,45,120,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,45,120,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ===== GLOW TEXT ===== */
+    .text-glow-pink  { text-shadow: 0 0 30px #ff2d78, 0 0 60px #ff2d7850; }
+    .text-glow-gold  { text-shadow: 0 0 30px #ffb400, 0 0 60px #ffb40050; }
+    .text-glow-white { text-shadow: 0 0 20px rgba(255,255,255,0.4); }
+
+    /* ===== NEON BORDER ===== */
+    .neon-border-pink   { border: 1px solid #ff2d7860; box-shadow: 0 0 20px #ff2d7820, inset 0 0 20px #ff2d7808; }
+    .neon-border-purple { border: 1px solid #8b5cf660; box-shadow: 0 0 20px #8b5cf620, inset 0 0 20px #8b5cf608; }
+    .neon-border-gold   { border: 1px solid #ffb40060; box-shadow: 0 0 20px #ffb40020, inset 0 0 20px #ffb40008; }
+
+    /* ===== GRADIENT TEXT ===== */
+    .grad-text {
+      background: linear-gradient(135deg, #ff2d78 0%, #c0392b 30%, #e67e22 60%, #ffb400 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .grad-text-purple {
+      background: linear-gradient(135deg, #8b5cf6, #ff2d78);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .grad-text-sunset {
+      background: linear-gradient(135deg, #ff6b00, #ffb400, #ff2d78);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-neon {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #ff2d78, #8b5cf6);
+      transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: 0 0 20px #ff2d7840, 0 0 40px #8b5cf620;
+    }
+    .btn-neon::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #8b5cf6, #ff2d78);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .btn-neon:hover::before { opacity: 1; }
+    .btn-neon:hover { transform: translateY(-3px); box-shadow: 0 0 40px #ff2d7870, 0 0 80px #8b5cf640; }
+    .btn-neon span { position: relative; z-index: 1; }
+
+    .btn-outline-neon {
+      border: 1px solid #ff2d7880;
+      background: transparent;
+      transition: all 0.4s;
+      box-shadow: 0 0 15px #ff2d7820;
+    }
+    .btn-outline-neon:hover {
+      border-color: #ff2d78;
+      background: rgba(255,45,120,0.1);
+      box-shadow: 0 0 30px #ff2d7850;
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #ff6b00, #ffb400);
+      box-shadow: 0 0 25px #ff6b0050;
+      transition: all 0.4s;
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 0 50px #ffb40070; }
+
+    /* ===== CARDS ===== */
+    .glass-card {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+    }
+    .glass-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,45,120,0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(255,45,120,0.15);
+    }
+
+    /* ===== PALM TREE CSS ===== */
+    .palm-tree {
+      position: absolute; bottom: 0;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .palm-trunk {
+      width: 14px;
+      border-radius: 6px;
+      background: linear-gradient(180deg, #5c3d1e, #3b2410);
+    }
+    .palm-leaves {
+      position: absolute;
+      bottom: 100%;
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .palm-leaf {
+      position: absolute;
+      width: 70px; height: 18px;
+      border-radius: 50% 100% 0 0;
+      transform-origin: bottom center;
+    }
+
+    /* ===== REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== SECTION DIVIDER ===== */
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ff2d78, #8b5cf6, #ff6b00, transparent);
+      opacity: 0.4;
+    }
+
+    /* ===== STARS ===== */
+    .stars-bg {
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 50%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(2px 2px at 70% 70%, rgba(255,180,0,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 90%, rgba(255,45,120,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(139,92,246,0.3) 0%, transparent 100%);
+    }
+
+    /* ===== MARQUEE ===== */
+    .marquee-inner {
+      display: flex;
+      width: max-content;
+      animation: marquee 22s linear infinite;
+    }
+
+    /* ===== SUN ===== */
+    @keyframes sunRise {
+      from { transform: translateY(20px); opacity: 0; }
+      to   { transform: translateY(0);   opacity: 1; }
+    }
+    .sun-animate { animation: sunRise 2s ease 0.5s both; }
+
+    /* ===== HERO FLOAT ANIMATION ===== */
+    @keyframes heroFloat {
+      0%,100% { transform: translateY(0) rotate(-1deg); }
+      50%      { transform: translateY(-12px) rotate(1deg); }
+    }
+    .hero-float { animation: heroFloat 7s ease-in-out infinite; }
+
+    /* ===== GRID LINE PULSE ===== */
+    @keyframes gridPulse {
+      0%,100% { opacity: 0.04; }
+      50%      { opacity: 0.1; }
+    }
+    .grid-pulse { animation: gridPulse 4s ease-in-out infinite; }
+
+    /* ===== NUMBER ODOMETER ===== */
+    .odometer-digit {
+      display: inline-block;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    /* ===== NEON LINE ===== */
+    .neon-line {
+      height: 3px;
+      background: linear-gradient(90deg, #ff2d78, #8b5cf6, #ff6b00, #ffb400);
+      border-radius: 2px;
+      box-shadow: 0 0 10px #ff2d78, 0 0 20px #8b5cf640;
+    }
+  </style>
+</head>
+<body class="bg-deep-purple antialiased">
+
+  <!-- ========================================
+       HEADER / NAVBAR
+       ======================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background: rgba(15,5,32,0);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-display text-lg text-white" style="background: linear-gradient(135deg,#ff2d78,#8b5cf6); box-shadow: 0 0 20px #ff2d7850;">
+            W
+          </div>
+          <div class="leading-none">
+            <div class="font-display text-xl tracking-widest grad-text">WEST COAST</div>
+            <div class="font-inter text-[9px] tracking-[0.3em] text-white/40 uppercase">Festival · Oran</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#vision"    class="font-body text-sm text-white/60 hover:text-white tracking-widest uppercase transition-colors duration-300">Vision</a>
+          <a href="#evolution" class="font-body text-sm text-white/60 hover:text-white tracking-widest uppercase transition-colors duration-300">Édition 2026</a>
+          <a href="#logistique" class="font-body text-sm text-white/60 hover:text-white tracking-widest uppercase transition-colors duration-300">Accès</a>
+          <a href="#cta" class="btn-neon px-6 py-2.5 rounded-full font-body font-semibold text-sm text-white tracking-wider">
+            <span>Réserver</span>
+          </a>
+        </nav>
+
+        <!-- Mobile burger -->
+        <button id="burger" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="b1"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="b2"></span>
+          <span class="block w-4 h-0.5 bg-white transition-all duration-300" id="b3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-6 pt-2 space-y-4" style="background: rgba(15,5,32,0.98); backdrop-filter: blur(20px);">
+      <a href="#vision"     class="block py-3 border-b border-white/5 text-white/70 tracking-widest uppercase text-sm">Vision</a>
+      <a href="#evolution"  class="block py-3 border-b border-white/5 text-white/70 tracking-widest uppercase text-sm">Édition 2026</a>
+      <a href="#logistique" class="block py-3 border-b border-white/5 text-white/70 tracking-widest uppercase text-sm">Accès</a>
+      <a href="#cta" class="btn-neon block text-center px-6 py-3 rounded-full font-semibold text-white tracking-wider text-sm"><span>Réserver sa place</span></a>
+    </div>
+  </header>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden noise stars-bg">
+
+    <!-- Sunset background gradient -->
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 80% at 50% 110%, #e67e22 0%, #c0392b 20%, #6b1f6e 45%, #2d0a4e 70%, #0f0520 100%);"></div>
+
+    <!-- Animated grid -->
+    <div class="absolute inset-0 grid-overlay grid-pulse"></div>
+
+    <!-- Glow orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 animate-float-slow" style="background: radial-gradient(circle, #ff2d78, transparent 70%); filter: blur(60px);"></div>
+    <div class="absolute top-1/3 right-1/4 w-80 h-80 rounded-full opacity-15 animate-float" style="background: radial-gradient(circle, #8b5cf6, transparent 70%); filter: blur(60px);"></div>
+    <div class="absolute bottom-1/4 left-1/2 w-72 h-72 rounded-full opacity-20" style="background: radial-gradient(circle, #ff6b00, transparent 70%); filter: blur(80px);"></div>
+
+    <!-- SUN -->
+    <div class="sun-animate absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" style="z-index:2;">
+      <div class="relative mx-auto" style="width: min(500px, 80vw);">
+        <!-- Sun glow rings -->
+        <div class="absolute inset-0 rounded-full opacity-20 animate-ping" style="background: radial-gradient(circle, #ffb400, transparent); animation-duration: 3s;"></div>
+        <div class="absolute -inset-8 rounded-full opacity-10" style="background: radial-gradient(circle, #ff6b00, transparent); filter: blur(20px);"></div>
+        <!-- Sun disc -->
+        <div class="mx-auto rounded-full" style="width: min(300px, 60vw); height: min(150px, 30vw); background: linear-gradient(180deg, #ffb400 0%, #ff6b00 60%, #c0392b 100%); border-radius: 50% 50% 0 0; box-shadow: 0 0 60px #ffb40080, 0 0 120px #ff6b0050; margin-top: min(20px, 4vw);"></div>
+        <!-- Sun reflection line -->
+        <div class="mx-auto mt-0" style="width: min(220px, 45vw); height: 4px; background: linear-gradient(90deg, transparent, #ffb400, transparent); border-radius: 2px; box-shadow: 0 0 20px #ffb400;"></div>
+      </div>
+    </div>
+
+    <!-- Palm Trees (CSS) -->
+    <!-- Left palm -->
+    <div class="absolute bottom-0 left-0 md:left-8 lg:left-16 pointer-events-none" style="z-index:3;">
+      <svg width="120" height="300" viewBox="0 0 120 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-90">
+        <!-- trunk -->
+        <path d="M60 300 C58 250 55 200 60 150 C62 130 58 100 62 80" stroke="#3b2410" stroke-width="12" stroke-linecap="round"/>
+        <!-- leaves -->
+        <path d="M62 80 C40 60 10 50 5 20 C20 35 45 55 62 80Z" fill="#1a4220" opacity="0.9"/>
+        <path d="M62 80 C80 55 110 45 115 15 C100 32 78 58 62 80Z" fill="#1f5228" opacity="0.85"/>
+        <path d="M62 80 C55 50 45 20 30 5 C42 25 55 55 62 80Z" fill="#1a4220" opacity="0.8"/>
+        <path d="M62 80 C68 48 78 18 95 5 C82 28 68 58 62 80Z" fill="#1f5228" opacity="0.75"/>
+        <path d="M62 80 C42 75 10 78 2 65 C20 70 45 75 62 80Z" fill="#163a1c" opacity="0.7"/>
+        <path d="M62 80 C82 74 112 70 118 60 C100 66 78 74 62 80Z" fill="#163a1c" opacity="0.65"/>
+      </svg>
+    </div>
+    <!-- Right palm -->
+    <div class="absolute bottom-0 right-0 md:right-8 lg:right-16 pointer-events-none" style="z-index:3;">
+      <svg width="120" height="280" viewBox="0 0 120 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-90" style="transform:scaleX(-1);">
+        <path d="M60 280 C58 235 55 185 60 140 C62 120 58 90 62 70" stroke="#3b2410" stroke-width="12" stroke-linecap="round"/>
+        <path d="M62 70 C40 50 10 40 5 10 C20 25 45 48 62 70Z" fill="#1a4220" opacity="0.9"/>
+        <path d="M62 70 C80 48 110 38 115 8 C100 25 78 50 62 70Z" fill="#1f5228" opacity="0.85"/>
+        <path d="M62 70 C55 42 45 15 30 2 C42 20 55 48 62 70Z" fill="#1a4220" opacity="0.8"/>
+        <path d="M62 70 C68 40 78 12 95 2 C82 22 68 50 62 70Z" fill="#1f5228" opacity="0.75"/>
+        <path d="M62 70 C42 65 10 68 2 56 C20 62 45 65 62 70Z" fill="#163a1c" opacity="0.7"/>
+      </svg>
+    </div>
+    <!-- Extra small palms mobile -->
+    <div class="absolute bottom-0 left-1/4 pointer-events-none md:hidden" style="z-index:3; opacity:0.5;">
+      <svg width="60" height="160" viewBox="0 0 60 160" fill="none">
+        <path d="M30 160 C29 130 28 100 30 75 C31 65 29 45 31 35" stroke="#3b2410" stroke-width="7" stroke-linecap="round"/>
+        <path d="M31 35 C20 25 5 18 2 5 C10 15 22 28 31 35Z" fill="#1a4220"/>
+        <path d="M31 35 C42 23 55 15 58 2 C50 14 38 26 31 35Z" fill="#1f5228"/>
+        <path d="M31 35 C27 22 22 8 15 2 C20 12 26 26 31 35Z" fill="#1a4220" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- Water/horizon reflection -->
+    <div class="absolute bottom-0 left-0 right-0" style="z-index:2; height: 120px; background: linear-gradient(180deg, transparent 0%, rgba(180,80,20,0.15) 40%, rgba(100,40,60,0.3) 100%);"></div>
+
+    <!-- Horizontal glow line (horizon) -->
+    <div class="absolute left-0 right-0" style="z-index:2; bottom: 90px; height: 2px; background: linear-gradient(90deg, transparent, #ff6b00, #ffb400, #ff6b00, transparent); opacity: 0.6; box-shadow: 0 0 20px #ff6b00;"></div>
+
+    <!-- HERO CONTENT -->
+    <div class="relative z-10 text-center px-4 sm:px-8 max-w-6xl mx-auto" style="z-index:5;">
+
+      <!-- Pre-title badge -->
+      <div class="inline-flex items-center gap-3 mb-8 px-5 py-2 rounded-full neon-border-pink" style="background: rgba(255,45,120,0.08); backdrop-filter: blur(10px);" data-reveal>
+        <span class="w-2 h-2 rounded-full bg-neon-pink animate-pulse"></span>
+        <span class="font-inter text-xs sm:text-sm tracking-[0.3em] text-white/80 uppercase">Oran · Algeria · 2026</span>
+        <span class="w-2 h-2 rounded-full bg-sunset-gold animate-pulse" style="animation-delay:0.5s;"></span>
+      </div>
+
+      <!-- Main title -->
+      <h1 class="font-display leading-none mb-4 tracking-wider" style="font-size: clamp(3.5rem, 12vw, 10rem);" data-reveal data-delay="100">
+        <span class="block grad-text text-glow-pink" style="letter-spacing: 0.05em;">WEST COAST</span>
+        <span class="block text-white text-glow-white" style="letter-spacing: 0.08em; font-size: 0.7em;">FESTIVAL</span>
+        <span class="block grad-text-sunset" style="letter-spacing: 0.1em; font-size: 0.5em;">2026</span>
+      </h1>
+
+      <!-- Neon underline -->
+      <div class="neon-line mx-auto mb-8 w-48 sm:w-64" data-reveal data-delay="200"></div>
+
+      <!-- Subtitle -->
+      <p class="font-body text-base sm:text-xl md:text-2xl text-white/70 mb-3 tracking-wide leading-relaxed max-w-3xl mx-auto" data-reveal data-delay="300">
+        The Ultimate Automotive & Lifestyle Experience in Oran
+      </p>
+
+      <!-- Date -->
+      <p class="font-display text-3xl sm:text-4xl md:text-5xl tracking-[0.2em] mb-10" style="background: linear-gradient(135deg,#ff6b00,#ffb400); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-shadow: none;" data-reveal data-delay="400">
+        25 — 27 JUNE 2026
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-reveal data-delay="500">
+        <a href="#cta" class="btn-neon px-8 py-4 rounded-full font-body font-bold text-base text-white tracking-widest uppercase w-full sm:w-auto text-center">
+          <span>🔥 Rejoindre l'aventure</span>
+        </a>
+        <a href="#vision" class="btn-outline-neon px-8 py-4 rounded-full font-body font-semibold text-base text-white tracking-widest uppercase w-full sm:w-auto text-center">
+          Découvrir l'événement ↓
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="flex flex-wrap justify-center gap-8 mt-16" data-reveal data-delay="600">
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl grad-text text-glow-pink" id="stat1">0</div>
+          <div class="font-inter text-xs tracking-[0.2em] text-white/40 uppercase mt-1">Voitures</div>
+        </div>
+        <div class="w-px h-12 self-center" style="background: linear-gradient(#ff2d78, #8b5cf6); opacity: 0.4;"></div>
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl grad-text-sunset" id="stat2">0</div>
+          <div class="font-inter text-xs tracking-[0.2em] text-white/40 uppercase mt-1">Visiteurs</div>
+        </div>
+        <div class="w-px h-12 self-center" style="background: linear-gradient(#ff6b00, #ffb400); opacity: 0.4;"></div>
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl" style="color:#ffb400; text-shadow: 0 0 20px #ffb40060;" id="stat3">0</div>
+          <div class="font-inter text-xs tracking-[0.2em] text-white/40 uppercase mt-1">Jours</div>
+        </div>
+        <div class="w-px h-12 self-center" style="background: linear-gradient(#8b5cf6, #ff2d78); opacity: 0.4;"></div>
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl grad-text-purple" id="stat4">0</div>
+          <div class="font-inter text-xs tracking-[0.2em] text-white/40 uppercase mt-1">Artistes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 opacity-60">
+      <span class="font-inter text-[10px] tracking-[0.3em] text-white/50 uppercase">Scroll</span>
+      <div class="w-px h-12" style="background: linear-gradient(#ff2d78, transparent); animation: scrollLine 2s ease-in-out infinite;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee ticker -->
+  <div class="relative overflow-hidden py-4" style="background: linear-gradient(135deg, rgba(255,45,120,0.15), rgba(139,92,246,0.15)); border-top: 1px solid rgba(255,45,120,0.2); border-bottom: 1px solid rgba(255,45,120,0.2);">
+    <div class="marquee-inner whitespace-nowrap font-display text-2xl tracking-[0.15em]">
+      <span class="px-8 grad-text">WEST COAST FESTIVAL</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-sunset">ORAN 2026</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-purple">AUTOMOTIVE · LIFESTYLE · MUSIC</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text">25 — 27 JUNE</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-sunset">ALGERIA'S BIGGEST CAR FESTIVAL</span>
+      <span class="px-8 text-white/20">✦</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="px-8 grad-text">WEST COAST FESTIVAL</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-sunset">ORAN 2026</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-purple">AUTOMOTIVE · LIFESTYLE · MUSIC</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text">25 — 27 JUNE</span>
+      <span class="px-8 text-white/20">✦</span>
+      <span class="px-8 grad-text-sunset">ALGERIA'S BIGGEST CAR FESTIVAL</span>
+      <span class="px-8 text-white/20">✦</span>
+    </div>
+  </div>
+
+  <!-- ========================================
+       SECTION VISION
+       ======================================== -->
+  <section id="vision" class="relative py-24 sm:py-32 overflow-hidden">
+
+    <!-- BG glow -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #8b5cf6, transparent); filter: blur(80px);"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #ff2d78, transparent); filter: blur(80px);"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section header -->
+      <div class="text-center mb-20" data-reveal>
+        <div class="inline-flex items-center gap-3 mb-5 px-4 py-1.5 rounded-full" style="border: 1px solid rgba(139,92,246,0.4); background: rgba(139,92,246,0.08);">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon-purple animate-pulse"></span>
+          <span class="font-inter text-xs tracking-[0.3em] text-neon-purple uppercase">Notre Identité</span>
+        </div>
+        <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl tracking-wider mb-6">
+          <span class="text-white">NOTRE</span>
+          <span class="block grad-text-purple">VISION</span>
+        </h2>
+        <div class="neon-line mx-auto w-32 mb-8" style="background: linear-gradient(90deg, #8b5cf6, #ff2d78);"></div>
+        <p class="font-body text-white/60 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+          Le West Coast Festival est plus qu'un simple rassemblement automobile.<br />
+          C'est la rencontre entre la <span class="text-neon-pink font-semibold">performance mécanique</span>,
+          la créativité et <span class="text-sunset-gold font-semibold">l'énergie de la côte méditerranéenne</span>.
+        </p>
+      </div>
+
+      <!-- Big quote -->
+      <div class="glass-card neon-border-purple rounded-3xl p-8 sm:p-12 mb-16 text-center relative overflow-hidden" data-reveal>
+        <div class="absolute top-4 left-8 font-display text-8xl opacity-10 grad-text-purple">"</div>
+        <div class="absolute bottom-4 right-8 font-display text-8xl opacity-10 grad-text-purple">"</div>
+        <p class="font-body text-xl sm:text-2xl lg:text-3xl text-white/80 leading-relaxed relative z-10 italic">
+          Au cœur d'Oran, la passion des machines rencontre l'art de vivre,<br class="hidden sm:block" />
+          créant une expérience unique où <span class="grad-text font-semibold not-italic">voitures, musique, design</span><br class="hidden sm:block" />
+          et communauté <span class="grad-text-sunset font-semibold not-italic">fusionnent</span>.
+        </p>
+      </div>
+
+      <!-- Value cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="glass-card rounded-2xl p-7 text-center group" data-reveal data-delay="0">
+          <div class="w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(255,45,120,0.2), rgba(255,45,120,0.05)); border: 1px solid rgba(255,45,120,0.3);">
+            🏎️
+          </div>
+          <h3 class="font-display text-2xl tracking-wider text-white mb-3">PERFORMANCE</h3>
+          <p class="font-inter text-sm text-white/50 leading-relaxed">Machines d'exception, pilotes de légende, adrénaline pure sur la route côtière d'Oran.</p>
+          <div class="mt-5 h-0.5 w-0 group-hover:w-full transition-all duration-500 rounded" style="background: linear-gradient(90deg, #ff2d78, #8b5cf6);"></div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card rounded-2xl p-7 text-center group" data-reveal data-delay="100">
+          <div class="w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(139,92,246,0.05)); border: 1px solid rgba(139,92,246,0.3);">
+            🎵
+          </div>
+          <h3 class="font-display text-2xl tracking-wider text-white mb-3">CULTURE</h3>
+          <p class="font-inter text-sm text-white/50 leading-relaxed">Musique live, art urbain et street food algérien dans un cadre méditerranéen inoubliable.</p>
+          <div class="mt-5 h-0.5 w-0 group-hover:w-full transition-all duration-500 rounded" style="background: linear-gradient(90deg, #8b5cf6, #ff2d78);"></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card rounded-2xl p-7 text-center group" data-reveal data-delay="200">
+          <div class="w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(255,107,0,0.2), rgba(255,107,0,0.05)); border: 1px solid rgba(255,107,0,0.3);">
+            🌅
+          </div>
+          <h3 class="font-display text-2xl tracking-wider text-white mb-3">LIFESTYLE</h3>
+          <p class="font-inter text-sm text-white/50 leading-relaxed">L'art de vivre à l'oranaise, couchers de soleil sur le front de mer, ambiance néon nocturne.</p>
+          <div class="mt-5 h-0.5 w-0 group-hover:w-full transition-all duration-500 rounded" style="background: linear-gradient(90deg, #ff6b00, #ffb400);"></div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card rounded-2xl p-7 text-center group" data-reveal data-delay="300">
+          <div class="w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(255,180,0,0.2), rgba(255,180,0,0.05)); border: 1px solid rgba(255,180,0,0.3);">
+            🤝
+          </div>
+          <h3 class="font-display text-2xl tracking-wider text-white mb-3">COMMUNAUTÉ</h3>
+          <p class="font-inter text-sm text-white/50 leading-relaxed">Une tribu de passionnés unis par l'amour des belles machines et la fierté de leur ville.</p>
+          <div class="mt-5 h-0.5 w-0 group-hover:w-full transition-all duration-500 rounded" style="background: linear-gradient(90deg, #ffb400, #ff6b00);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========================================
+       SECTION ÉVOLUTION
+       ======================================== -->
+  <section id="evolution" class="relative py-24 sm:py-32 overflow-hidden">
+
+    <!-- BG -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5" style="background: radial-gradient(circle, #ff6b00, transparent); filter: blur(100px);"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Header -->
+      <div class="text-center mb-20" data-reveal>
+        <div class="inline-flex items-center gap-3 mb-5 px-4 py-1.5 rounded-full neon-border-gold" style="background: rgba(255,107,0,0.08);">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon-orange animate-pulse"></span>
+          <span class="font-inter text-xs tracking-[0.3em] text-neon-orange uppercase">Édition 2026</span>
+        </div>
+        <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl tracking-wider mb-6">
+          <span class="text-white">UNE ÉVOLUTION</span>
+          <span class="block grad-text-sunset">AMBITIEUSE</span>
+        </h2>
+        <div class="neon-line mx-auto w-32" style="background: linear-gradient(90deg, #ff6b00, #ffb400);"></div>
+      </div>
+
+      <!-- VS Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 items-stretch mb-20">
+
+        <!-- Edition précédente -->
+        <div class="glass-card neon-border-purple rounded-3xl p-8 sm:p-10" data-reveal>
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-display" style="background: rgba(139,92,246,0.2); border: 1px solid rgba(139,92,246,0.4);">
+              01
+            </div>
+            <div>
+              <div class="font-display text-xl tracking-wider grad-text-purple">ÉDITION PASSÉE</div>
+              <div class="font-inter text-xs text-white/30 tracking-widest">Les fondations</div>
+            </div>
+          </div>
+          <ul class="space-y-5">
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                <span class="text-sm">✅</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-white text-sm mb-0.5">Succès massif</div>
+                <div class="font-inter text-xs text-white/40">Des milliers de visiteurs pour la première édition</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                <span class="text-sm">✅</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-white text-sm mb-0.5">Passion automobile</div>
+                <div class="font-inter text-xs text-white/40">Les plus belles machines d'Algérie réunies</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                <span class="text-sm">✅</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-white text-sm mb-0.5">Grande affluence</div>
+                <div class="font-inter text-xs text-white/40">Un engouement populaire qui dépasse les attentes</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                <span class="text-sm">✅</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-white text-sm mb-0.5">Communauté établie</div>
+                <div class="font-inter text-xs text-white/40">La base d'une family automobile qui grandit</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- VS divider -->
+        <div class="flex flex-col items-center justify-center py-4 lg:py-0" data-reveal>
+          <div class="w-px flex-1 hidden lg:block" style="background: linear-gradient(transparent, #ff2d78, transparent);"></div>
+          <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center font-display text-xl lg:text-2xl my-4"
+               style="background: linear-gradient(135deg, #ff2d78, #8b5cf6); box-shadow: 0 0 30px #ff2d7850, 0 0 60px #8b5cf630;">
+            VS
+          </div>
+          <div class="w-px flex-1 hidden lg:block" style="background: linear-gradient(transparent, #ffb400, transparent);"></div>
+        </div>
+
+        <!-- Edition 2026 -->
+        <div class="glass-card neon-border-gold rounded-3xl p-8 sm:p-10 relative overflow-hidden" data-reveal>
+          <!-- Glow badge -->
+          <div class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-display tracking-widest" style="background: linear-gradient(135deg, #ff6b00, #ffb400); color: #0f0520;">
+            NEW
+          </div>
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-display" style="background: rgba(255,107,0,0.2); border: 1px solid rgba(255,180,0,0.4);">
+              02
+            </div>
+            <div>
+              <div class="font-display text-xl tracking-wider grad-text-sunset">ÉDITION 2026</div>
+              <div class="font-inter text-xs text-white/30 tracking-widest">Niveau supérieur</div>
+            </div>
+          </div>
+          <ul class="space-y-5">
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,180,0,0.4);">
+                <span class="text-sm">🚀</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-sunset-gold text-sm mb-0.5">Organisation ultra-fluide</div>
+                <div class="font-inter text-xs text-white/40">Système d'entrée digitalisé, zones optimisées</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,180,0,0.4);">
+                <span class="text-sm">🛡️</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-sunset-gold text-sm mb-0.5">Sécurité renforcée</div>
+                <div class="font-inter text-xs text-white/40">Équipe professionnelle, périmètre sécurisé 360°</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,180,0,0.4);">
+                <span class="text-sm">🌴</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-sunset-gold text-sm mb-0.5">Village méditerranéen</div>
+                <div class="font-inter text-xs text-white/40">Espace food & lifestyle repensé, ambiance côtière</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,180,0,0.4);">
+                <span class="text-sm">🎪</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-sunset-gold text-sm mb-0.5">Nouvelle scène géante</div>
+                <div class="font-inter text-xs text-white/40">Production live spectaculaire, shows nocturnes</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,180,0,0.4);">
+                <span class="text-sm">🌟</span>
+              </div>
+              <div>
+                <div class="font-body font-semibold text-sunset-gold text-sm mb-0.5">Expérience immersive</div>
+                <div class="font-inter text-xs text-white/40">Zones thématiques, AR/photo spots, animations</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline horizontale -->
+      <div class="glass-card rounded-3xl p-8 sm:p-10 overflow-x-auto" data-reveal>
+        <h3 class="font-display text-2xl sm:text-3xl tracking-wider text-center mb-10 grad-text">TIMELINE 25 — 27 JUIN</h3>
+        <div class="flex items-start gap-4 min-w-max mx-auto" style="min-width: fit-content;">
+
+          <!-- Day 1 -->
+          <div class="flex flex-col items-center gap-3 w-52">
+            <div class="px-5 py-2 rounded-full font-display text-lg tracking-wider" style="background: linear-gradient(135deg,#ff2d78,#8b5cf6);">JOUR 1</div>
+            <div class="text-xs font-inter text-white/40 tracking-widest uppercase">Jeudi 25 Juin</div>
+            <div class="space-y-2 w-full">
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,45,120,0.1); border: 1px solid rgba(255,45,120,0.2);">10:00 — Ouverture</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,45,120,0.1); border: 1px solid rgba(255,45,120,0.2);">14:00 — Parade Supercars</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,45,120,0.1); border: 1px solid rgba(255,45,120,0.2);">20:00 — Show Nocturne</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center pt-8 gap-2">
+            <div class="w-12 h-0.5" style="background: linear-gradient(90deg, #ff2d78, #ff6b00);"></div>
+            <span class="text-white/20 text-xs">→</span>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="flex flex-col items-center gap-3 w-52">
+            <div class="px-5 py-2 rounded-full font-display text-lg tracking-wider" style="background: linear-gradient(135deg,#ff6b00,#ffb400);">JOUR 2</div>
+            <div class="text-xs font-inter text-white/40 tracking-widest uppercase">Vendredi 26 Juin</div>
+            <div class="space-y-2 w-full">
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.2);">09:00 — Drift Competition</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.2);">15:00 — Village Méditerranéen</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.2);">21:00 — Concert Live</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center pt-8 gap-2">
+            <div class="w-12 h-0.5" style="background: linear-gradient(90deg, #ff6b00, #ffb400);"></div>
+            <span class="text-white/20 text-xs">→</span>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="flex flex-col items-center gap-3 w-52">
+            <div class="px-5 py-2 rounded-full font-display text-lg tracking-wider" style="background: linear-gradient(135deg,#ffb400,#ff6b00);">JOUR 3</div>
+            <div class="text-xs font-inter text-white/40 tracking-widest uppercase">Samedi 27 Juin</div>
+            <div class="space-y-2 w-full">
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,180,0,0.1); border: 1px solid rgba(255,180,0,0.2);">10:00 — Grand Concours</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,180,0,0.1); border: 1px solid rgba(255,180,0,0.2);">17:00 — Finale & Awards</div>
+              <div class="px-4 py-2.5 rounded-xl text-xs font-inter text-white/70" style="background: rgba(255,180,0,0.1); border: 1px solid rgba(255,180,0,0.2);">22:00 — Feu d'Artifice 🎆</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========================================
+       SECTION LOGISTIQUE
+       ======================================== -->
+  <section id="logistique" class="relative py-24 sm:py-32 overflow-hidden">
+
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute bottom-0 left-1/4 w-72 h-72 rounded-full opacity-8" style="background: radial-gradient(circle, #ff2d78, transparent); filter: blur(100px);"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Header -->
+      <div class="text-center mb-20" data-reveal>
+        <div class="inline-flex items-center gap-3 mb-5 px-4 py-1.5 rounded-full neon-border-pink" style="background: rgba(255,45,120,0.08);">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon-pink animate-pulse"></span>
+          <span class="font-inter text-xs tracking-[0.3em] text-neon-pink uppercase">Logistique & Accès</span>
+        </div>
+        <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl tracking-wider mb-6">
+          <span class="text-white">ORGANISATION</span>
+          <span class="block grad-text">&amp; ACCÈS</span>
+        </h2>
+        <div class="neon-line mx-auto w-32 mb-8"></div>
+        <p class="font-body text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
+          Le West Coast Festival 2026 garantit une organisation de niveau international pour une expérience fluide, sécurisée et inoubliable pour chacun.
+        </p>
+      </div>
+
+      <!-- 3 Access Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+        <!-- Staff -->
+        <div class="glass-card rounded-3xl p-8 group relative overflow-hidden" data-reveal data-delay="0">
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" style="background: linear-gradient(135deg, rgba(139,92,246,0.08), transparent);"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(139,92,246,0.1)); border: 1px solid rgba(139,92,246,0.4); box-shadow: 0 0 20px rgba(139,92,246,0.2);">
+              👷
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-display tracking-widest mb-4" style="background: rgba(139,92,246,0.2); border: 1px solid rgba(139,92,246,0.4); color: #a78bfa;">
+              ACCÈS STAFF
+            </div>
+            <h3 class="font-display text-3xl tracking-wider text-white mb-4">ÉQUIPE</h3>
+            <p class="font-inter text-sm text-white/50 leading-relaxed mb-6">Entrée dédiée côté nord. Badge requis. Briefing à 07h30 chaque matin. Espace loge et restauration staff exclusif.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(139,92,246,0.2); color: #a78bfa;">✓</span>
+                Accès toutes zones
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(139,92,246,0.2); color: #a78bfa;">✓</span>
+                Parking réservé
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(139,92,246,0.2); color: #a78bfa;">✓</span>
+                Communication radio
+              </li>
+            </ul>
+            <div class="mt-8 h-1 w-0 group-hover:w-full transition-all duration-700 rounded" style="background: linear-gradient(90deg, #8b5cf6, #ff2d78);"></div>
+          </div>
+        </div>
+
+        <!-- Exposants -->
+        <div class="glass-card rounded-3xl p-8 group relative overflow-hidden" data-reveal data-delay="100">
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" style="background: linear-gradient(135deg, rgba(255,107,0,0.08), transparent);"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(255,107,0,0.3), rgba(255,107,0,0.1)); border: 1px solid rgba(255,180,0,0.4); box-shadow: 0 0 20px rgba(255,107,0,0.2);">
+              🚗
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-display tracking-widest mb-4" style="background: rgba(255,107,0,0.2); border: 1px solid rgba(255,180,0,0.4); color: #ffb400;">
+              ACCÈS EXPOSANTS
+            </div>
+            <h3 class="font-display text-3xl tracking-wider text-white mb-4">EXPOSANTS</h3>
+            <p class="font-inter text-sm text-white/50 leading-relaxed mb-6">Installation la veille à partir de 18h. Entrée véhicule par la porte est. Espace showroom attribué avec plaquette de positionnement.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,107,0,0.2); color: #ffb400;">✓</span>
+                Emplacement premium
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,107,0,0.2); color: #ffb400;">✓</span>
+                Visibilité maximale
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,107,0,0.2); color: #ffb400;">✓</span>
+                Kit communication offert
+              </li>
+            </ul>
+            <div class="mt-8 h-1 w-0 group-hover:w-full transition-all duration-700 rounded" style="background: linear-gradient(90deg, #ff6b00, #ffb400);"></div>
+          </div>
+        </div>
+
+        <!-- Public -->
+        <div class="glass-card rounded-3xl p-8 group relative overflow-hidden" data-reveal data-delay="200">
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" style="background: linear-gradient(135deg, rgba(255,45,120,0.08), transparent);"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 transition-transform duration-300 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(255,45,120,0.3), rgba(255,45,120,0.1)); border: 1px solid rgba(255,45,120,0.4); box-shadow: 0 0 20px rgba(255,45,120,0.2);">
+              🎟️
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-display tracking-widest mb-4" style="background: rgba(255,45,120,0.2); border: 1px solid rgba(255,45,120,0.4); color: #ff2d78;">
+              ACCÈS PUBLIC
+            </div>
+            <h3 class="font-display text-3xl tracking-wider text-white mb-4">VISITEURS</h3>
+            <p class="font-inter text-sm text-white/50 leading-relaxed mb-6">Entrée principale sur l'avenue du front de mer. Billetterie digitale ou sur place. Files dédiées VIP, Standard et Famille.</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,45,120,0.2); color: #ff2d78;">✓</span>
+                Billet digital QR
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,45,120,0.2); color: #ff2d78;">✓</span>
+                Navettes gratuites
+              </li>
+              <li class="flex items-center gap-3 text-sm text-white/60">
+                <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs flex-shrink-0" style="background: rgba(255,45,120,0.2); color: #ff2d78;">✓</span>
+                Zone famille sécurisée
+              </li>
+            </ul>
+            <div class="mt-8 h-1 w-0 group-hover:w-full transition-all duration-700 rounded" style="background: linear-gradient(90deg, #ff2d78, #8b5cf6);"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info banner -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left" data-reveal style="border: 1px solid rgba(255,180,0,0.2);">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 mx-auto sm:mx-0" style="background: linear-gradient(135deg,#ff6b00,#ffb400); box-shadow: 0 0 20px #ff6b0050;">
+          📍
+        </div>
+        <div class="flex-1">
+          <div class="font-display text-xl tracking-wider text-white mb-1">LIEU : FRONT DE MER D'ORAN</div>
+          <div class="font-inter text-sm text-white/50">Promenade du front de mer · Oran, Algérie · Accès libre en transports en commun depuis le centre-ville</div>
+        </div>
+        <a href="#cta" class="btn-gold px-6 py-3 rounded-full font-display text-sm tracking-widest text-deep-purple uppercase flex-shrink-0 whitespace-nowrap">
+          Voir le plan →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" style="background: linear-gradient(90deg, transparent, #ffb400, #ff2d78, transparent);"></div>
+
+  <!-- ========================================
+       SECTION CTA FINAL
+       ======================================== -->
+  <section id="cta" class="relative py-28 sm:py-40 overflow-hidden noise">
+
+    <!-- Dramatic sunset bg -->
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 100% 100% at 50% 100%, #e67e22 0%, #c0392b 20%, #6b1f6e 50%, #0f0520 80%);"></div>
+
+    <!-- Grid -->
+    <div class="absolute inset-0 grid-overlay opacity-50 grid-pulse"></div>
+
+    <!-- Glows -->
+    <div class="absolute top-0 left-1/3 w-80 h-80 rounded-full opacity-20 animate-float" style="background: radial-gradient(circle, #ff2d78, transparent); filter: blur(60px);"></div>
+    <div class="absolute bottom-0 right-1/3 w-80 h-80 rounded-full opacity-20 animate-float-slow" style="background: radial-gradient(circle, #ffb400, transparent); filter: blur(60px);"></div>
+
+    <!-- Stars -->
+    <div class="absolute inset-0 stars-bg pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 text-center" data-reveal>
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-3 mb-8 px-5 py-2.5 rounded-full" style="background: rgba(255,45,120,0.15); border: 1px solid rgba(255,45,120,0.4); box-shadow: 0 0 30px rgba(255,45,120,0.2);">
+        <span class="text-neon-pink animate-pulse">🔥</span>
+        <span class="font-inter text-sm tracking-[0.2em] text-white/80 uppercase">Édition Limitée · Early Bird</span>
+        <span class="text-sunset-gold animate-pulse">⭐</span>
+      </div>
+
+      <!-- Title -->
+      <h2 class="font-display leading-none mb-6" style="font-size: clamp(2.5rem, 9vw, 7rem); letter-spacing: 0.05em;">
+        <span class="block text-white text-glow-white">REJOIGNEZ</span>
+        <span class="block grad-text text-glow-pink" style="font-size: 1.1em;">L'EXPÉRIENCE</span>
+        <span class="block text-white/80" style="font-size: 0.6em; letter-spacing: 0.15em;">WEST COAST FESTIVAL</span>
+      </h2>
+
+      <div class="neon-line mx-auto w-48 mb-8 animate-glow-pulse"></div>
+
+      <p class="font-body text-lg sm:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Trois jours de passion automobile, de musique live et de lifestyle méditerranéen.<br />
+        <span class="text-white/80 font-medium">25 — 27 Juin 2026 · Oran, Algérie</span>
+      </p>
+
+      <!-- Main CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+        <a href="#" class="btn-neon px-10 py-5 rounded-full font-display text-xl tracking-widest text-white uppercase w-full sm:w-auto text-center animate-glow-pulse">
+          <span>🎟️ Réserver sa place</span>
+        </a>
+        <a href="#" class="btn-outline-neon px-10 py-5 rounded-full font-display text-xl tracking-widest text-white uppercase w-full sm:w-auto text-center">
+          En savoir plus →
+        </a>
+      </div>
+
+      <!-- Ticket types preview -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div class="glass-card rounded-2xl p-5 text-center group hover:border-neon-pink transition-all duration-300" data-reveal>
+          <div class="font-display text-2xl tracking-widest mb-1 text-white/80">GENERAL</div>
+          <div class="font-display text-3xl grad-text mb-2">1 500 <span class="text-xl">DZD</span></div>
+          <div class="font-inter text-xs text-white/30">/ jour</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center relative overflow-hidden" data-reveal data-delay="100" style="border-color: rgba(255,45,120,0.4); box-shadow: 0 0 30px rgba(255,45,120,0.1);">
+          <div class="absolute top-0 left-0 right-0 h-0.5" style="background: linear-gradient(90deg, #ff2d78, #8b5cf6);"></div>
+          <div class="font-inter text-xs text-neon-pink tracking-widest uppercase mb-2">⭐ Populaire</div>
+          <div class="font-display text-2xl tracking-widest mb-1 text-white">PASS 3 JOURS</div>
+          <div class="font-display text-3xl grad-text mb-2">3 500 <span class="text-xl">DZD</span></div>
+          <div class="font-inter text-xs text-white/30">/ 3 jours</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center group" data-reveal data-delay="200">
+          <div class="font-display text-2xl tracking-widest mb-1" style="color: #ffb400;">VIP</div>
+          <div class="font-display text-3xl grad-text-sunset mb-2">12 000 <span class="text-xl">DZD</span></div>
+          <div class="font-inter text-xs text-white/30">/ accès total</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="relative py-16 overflow-hidden" style="background: rgba(8,2,18,0.95); border-top: 1px solid rgba(255,45,120,0.15);">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-display text-xl text-white" style="background: linear-gradient(135deg,#ff2d78,#8b5cf6); box-shadow: 0 0 20px #ff2d7840;">W</div>
+            <div>
+              <div class="font-display text-2xl tracking-widest grad-text">WEST COAST FESTIVAL</div>
+              <div class="font-inter text-xs text-white/30 tracking-[0.3em]">ORAN · ALGERIA · 2026</div>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/40 leading-relaxed max-w-sm mb-6">
+            Algeria's premier automotive and lifestyle festival. Where machines, music and Mediterranean culture collide.
+          </p>
+          <!-- Social links -->
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center font-inter text-xs text-white/50 hover:text-white transition-all duration-300 hover:border-neon-pink" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);">FB</a>
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center font-inter text-xs text-white/50 hover:text-white transition-all duration-300" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);">IG</a>
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center font-inter text-xs text-white/50 hover:text-white transition-all duration-300" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);">YT</a>
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center font-inter text-xs text-white/50 hover:text-white transition-all duration-300" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);">TT</a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h5 class="font-display text-sm tracking-[0.3em] text-white/30 uppercase mb-5">Navigation</h5>
+          <ul class="space-y-3">
+            <li><a href="#vision"     class="font-inter text-sm text-white/50 hover:text-white transition-colors">Notre Vision</a></li>
+            <li><a href="#evolution"  class="font-inter text-sm text-white/50 hover:text-white transition-colors">Édition 2026</a></li>
+            <li><a href="#logistique" class="font-inter text-sm text-white/50 hover:text-white transition-colors">Organisation</a></li>
+            <li><a href="#cta"        class="font-inter text-sm text-white/50 hover:text-white transition-colors">Billetterie</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h5 class="font-display text-sm tracking-[0.3em] text-white/30 uppercase mb-5">Contact</h5>
+          <ul class="space-y-3">
+            <li class="font-inter text-sm text-white/50">contact@westcoastfestival.dz</li>
+            <li class="font-inter text-sm text-white/50">+213 41 000 000</li>
+            <li class="font-inter text-sm text-white/50">Oran, Algérie 🇩🇿</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <p class="font-inter text-xs text-white/25">© 2026 West Coast Festival. Tous droits réservés.</p>
+        <p class="font-inter text-xs text-white/25">Fait avec ❤️ à Oran, Algérie 🇩🇿</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    'use strict';
+
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(15,5,32,0.95)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.borderBottom = '1px solid rgba(255,45,120,0.15)';
+      } else {
+        navbar.style.background = 'rgba(15,5,32,0)';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.borderBottom = 'none';
+      }
+    }, { passive: true });
+
+    // ===== MOBILE MENU =====
+    const burgerBtn = document.getElementById('burger');
+    const mobileMenuEl = document.getElementById('mobile-menu');
+    const b1 = document.getElementById('b1');
+    const b2 = document.getElementById('b2');
+    const b3 = document.getElementById('b3');
+    let menuOpen = false;
+
+    burgerBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenuEl.classList.toggle('hidden', !menuOpen);
+      if (menuOpen) {
+        b1.style.transform = 'translateY(7px) rotate(45deg)';
+        b2.style.opacity = '0';
+        b3.style.transform = 'translateY(-7px) rotate(-45deg)';
+        b3.style.width = '24px';
+      } else {
+        b1.style.transform = '';
+        b2.style.opacity = '';
+        b3.style.transform = '';
+        b3.style.width = '';
+      }
+    });
+
+    mobileMenuEl.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenuEl.classList.add('hidden');
+        b1.style.transform = '';
+        b2.style.opacity = '';
+        b3.style.transform = '';
+      });
+    });
+
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay || '0');
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      revealObserver.observe(el);
+    });
+
+    // ===== STAT COUNTERS =====
+    const stats = [
+      { el: document.getElementById('stat1'), target: 300, suffix: '+' },
+      { el: document.getElementById('stat2'), target: 50,  suffix: 'k+' },
+      { el: document.getElementById('stat3'), target: 3,   suffix: '' },
+      { el: document.getElementById('stat4'), target: 12,  suffix: '+' },
+    ];
+
+    function animateNum(el, target, suffix, duration = 2000) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target + suffix; clearInterval(timer); }
+        else el.textContent = Math.floor(start) + suffix;
+      }, 16);
+    }
+
+    // Trigger when hero is visible
+    const heroObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        setTimeout(() => stats.forEach(s => animateNum(s.el, s.target, s.suffix)), 1000);
+        heroObs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    const heroSection = document.getElementById('hero');
+    if (heroSection) heroObs.observe(heroSection);
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const navH = 80;
+        window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
+      });
+    });
+
+    // ===== PARALLAX GLOWS =====
+    let ticking = false;
+    window.addEventListener('mousemove', e => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const x = (e.clientX / window.innerWidth - 0.5) * 25;
+          const y = (e.clientY / window.innerHeight - 0.5) * 15;
+          document.querySelectorAll('.hero-glow-parallax').forEach((el, i) => {
+            el.style.transform = `translate(${x * (i + 1)}px, ${y * (i + 1)}px)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // ===== CURSOR GLOW TRAIL =====
+    const trail = [];
+    const TRAIL_LENGTH = 8;
+    for (let i = 0; i < TRAIL_LENGTH; i++) {
+      const dot = document.createElement('div');
+      dot.style.cssText = `
+        position:fixed; pointer-events:none; z-index:9999; border-radius:50%;
+        width:${(TRAIL_LENGTH - i) * 3}px; height:${(TRAIL_LENGTH - i) * 3}px;
+        background: rgba(255,45,120,${(TRAIL_LENGTH - i) * 0.05});
+        transform:translate(-50%,-50%);
+        transition: left ${i * 0.04}s, top ${i * 0.04}s;
+      `;
+      document.body.appendChild(dot);
+      trail.push(dot);
+    }
+    document.addEventListener('mousemove', e => {
+      trail.forEach(dot => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top  = e.clientY + 'px';
+      });
+    });
+
+    // Hide trail on mobile
+    if ('ontouchstart' in window) trail.forEach(d => d.remove());
+  </script>
+
+</body>
+</html>
